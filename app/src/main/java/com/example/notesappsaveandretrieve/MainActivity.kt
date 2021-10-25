@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             if (edNote.text.isNotEmpty()){
                 val status=dbHelper.saveNote(note)
                 if (status!=-1L){
-                    dbHelper.saveNote(note)
+                    
                     Toast.makeText(applicationContext, "note added $status", Toast.LENGTH_SHORT).show()
                     recyclerView.adapter= RVAdapter(dbHelper.getData())
                     recyclerView.layoutManager=LinearLayoutManager(this)
