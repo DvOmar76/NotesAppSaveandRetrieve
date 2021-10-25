@@ -33,7 +33,7 @@ class DBHelper (context: Context):SQLiteOpenHelper(context,"details.db",null,1){
             val note=c.getString(c.getColumnIndex("note"))
            Log.d("aasd321321",note)
             notes.add(note)
-            c.moveToNext()
+       
        }
         Log.d("aasd321321",notes.toString())
         c.close()
